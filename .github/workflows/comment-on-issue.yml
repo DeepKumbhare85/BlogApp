@@ -23,3 +23,6 @@ jobs:
         run: |
           gh issue comment 1 --body "The time was ${{ steps.hello.outputs.time }}"
           gh issue comment 1 --body "my temp commit"
+      - name: comment on issue
+        run: |
+          echo ${{ github.payload.comment }}
