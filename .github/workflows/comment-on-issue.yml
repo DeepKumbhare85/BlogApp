@@ -7,8 +7,8 @@ jobs:
   add_comment:
     runs-on: ubuntu-latest
     steps:
-      - name: comment issue body
-        uses: themeselection/gh-action-comment-on-new-issue@v4.0.1
+      - name: Hello world action step
+        id: hello
+        uses: DeepKumbhare85/issue-comment-javascript-action@v1.1
         with:
-          message: |
-            hii [@${{ github.actor }}](https://github.com/${{ github.actor }}) You commented.
+          who-to-greet: "Mona the Octocat"
