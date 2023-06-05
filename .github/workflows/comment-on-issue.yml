@@ -14,15 +14,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Hello world action step
-        id: hello
-        uses: DeepKumbhare85/issue-comment-javascript-action@v1.1
-        with:
-          who-to-greet: "Deep kumbhare"
-      - name: Get the output time
-        run: |
-          gh issue comment 1 --body "The time was ${{ steps.hello.outputs.time }}"
-          gh issue comment 1 --body "my temp commit"
       - name: comment on issue
         run: |
-          gh issue comment ${{ github.event.issue.number }} --body ${{ github.event.comment.body }}
+          gh issue comment ${{ github.event.issue.number }} --body "You commented ${{ github.event.comment.body }}"
