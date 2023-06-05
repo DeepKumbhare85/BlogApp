@@ -1,0 +1,14 @@
+name: comment-on-issue
+run-name: add comment
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  add_comment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: comment issue body
+        uses: themeselection/gh-action-comment-on-new-issue@v4.0.1
+        with:
+          message: |
+            hii [@${{ github.actor }}](https://github.com/${{ github.actor }}) You commented.
