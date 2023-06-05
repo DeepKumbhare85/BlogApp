@@ -16,4 +16,4 @@ jobs:
 
       - name: comment on issue
         run: |
-          gh issue comment ${{ github.event.issue.number }} --body "You commented ${{ github.event.comment.body }}"
+          gh issue comment ${{ github.event.issue.number }} --body "You commented "${{ github.event.comment.body }}""
