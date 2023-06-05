@@ -18,4 +18,4 @@ jobs:
           who-to-greet: "Mona the Octocat"
       - name: Get the output time
         run: |
-          gh issue comment 2 --body "The time was ${{ steps.hello.outputs.time }}"
+          gh issue comment 1 --body "The time was ${{ steps.hello.outputs.time }}"
