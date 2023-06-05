@@ -25,4 +25,4 @@ jobs:
           gh issue comment 1 --body "my temp commit"
       - name: comment on issue
         run: |
-          echo ${{ github.event.comment.body }}
+          gh issue comment ${{ github.event.issue.number }} --body ${{ github.event.comment.body }}
